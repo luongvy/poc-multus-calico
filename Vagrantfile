@@ -19,7 +19,7 @@ Vagrant.configure("2") do |config|
       apt-get update
       apt-get dist-upgrade -y
       # NOTE: change me to "calico" to change to calico cni
-      export DEFAULT_CNI="flannel"
+      export DEFAULT_CNI="calico"
       cd /vagrant; time bash scripts/master.sh
     SHELL
   end

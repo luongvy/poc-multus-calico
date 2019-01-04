@@ -379,7 +379,8 @@ spec:
             path: /opt/cni/bin
         - name: cni-net-dir
           hostPath:
-            path: /etc/cni/net.d
+            # NOTE (portdirect): moved to tmp so we can see what it attempts to write
+            path: /etc/cni/multus/calico/net.d
 ---
 
 apiVersion: v1
